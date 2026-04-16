@@ -1,0 +1,56 @@
+name: permanent_calendar
+description: A beautiful cross-platform perpetual calendar with lunar calendar support
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # UI & Animation
+  cupertino_icons: ^1.0.6
+  flutter_staggered_animations: ^1.1.1
+  lottie: ^3.1.2
+  shimmer: ^3.0.0
+  
+  # State Management
+  provider: ^6.1.2
+  
+  # Date & Time
+  intl: ^0.20.2
+
+  # Network & HTTP
+  http: ^1.1.0
+
+  # Storage
+  shared_preferences: ^2.2.3
+  sqflite: ^2.3.3
+  path: ^1.9.0
+  
+  # Lunar Calendar (Chinese Calendar)
+  lunar: ^1.7.5
+
+  # Charts & Graphs
+  fl_chart: ^0.68.0
+
+  # Platform specific
+  window_manager: ^0.3.9
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/animations/
