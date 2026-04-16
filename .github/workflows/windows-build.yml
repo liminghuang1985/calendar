@@ -21,9 +21,16 @@ jobs:
       - name: Build Windows release
         run: flutter build windows --release
 
+      - name: Find Release folder
+        id: find_release
+        shell: pwsh
+        run: |
+          $release = Get-ChildItem -Path "build/windows" -Recurse -Filter "Release" -Directory | Select-Object -First 1
+          Write-Host "Release folder: $($release.FullName)"
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: windows-exe
-          path: build/windows/**/Release/*.exe
+          name: calendar-windows
+          path: build/windows/x64/runner/Release/
           retention-days: 7
