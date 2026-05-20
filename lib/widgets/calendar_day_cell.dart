@@ -173,17 +173,17 @@ class _CalendarDayCellState extends State<CalendarDayCell>
   }
 
   Gradient _getBackgroundGradient(ColorScheme colorScheme) {
-    // 今天的日期 - 红色高亮
+    // 今天的日期 - 柔和珊瑚色（降低饱和度）
     if (widget.calendarDate.isToday) {
       return const LinearGradient(
-        colors: [Color(0xFFFF4757), Color(0xFFFF3742)],
+        colors: [Color(0xFFEF5350), Color(0xFFE57373)],
       );
     }
 
-    // 选中的日期 - 橙色高亮
+    // 选中的日期 - 柔和橙色
     if (widget.isSelected) {
       return const LinearGradient(
-        colors: [Color(0xFFFF6B35), Color(0xFFFF8E53)],
+        colors: [Color(0xFFFF8A65), Color(0xFFFFAB91)],
       );
     }
 
